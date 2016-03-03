@@ -4,10 +4,10 @@
 
 # Site
 title: Entere
-subtitle: entere - PHP开发工程师
+subtitle: entere - 专注web开发
 description:
-author: zh-Hans
-language:
+author: Entere
+language: zh-CN
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yelee 
+theme: yilia 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
