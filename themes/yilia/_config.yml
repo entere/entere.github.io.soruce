@@ -3,7 +3,7 @@ menu:
   主页: /
   归档: /archives
   关于: /about
-  随笔: /tags/随笔
+  #随笔: /tags/随笔
 
 # SubNav
 subnav:
