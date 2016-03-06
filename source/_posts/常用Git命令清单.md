@@ -1,7 +1,7 @@
 ---
 title: 常用Git命令清单
 date: 2016-03-03 15:00:25
-tags:
+tags: git
 ---
 
 [转载自阮一峰的网络日志](http://www.ruanyifeng.com/)
@@ -9,7 +9,7 @@ tags:
 我每天使用 Git ，但是很多命令记不住。
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。
 
-![git](/img/upload/20160303_git_1.png "git")
+![git](/images/20160303_git_1.png "git")
 
 下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。
 > * Workspace：工作区
@@ -306,4 +306,4 @@ $ git archive
 
 ```
 
-![git常用命令速查](/img/upload/20160303_git_2.png "git")
+![git常用命令速查](/images/20160303_git_2.png "git")

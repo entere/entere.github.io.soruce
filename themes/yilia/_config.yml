@@ -36,7 +36,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar: /img/avatar.jpg
+avatar: /images/avatar.jpg
 #是否开启分享
 share_jia: false
 share_addthis: false
@@ -56,6 +56,6 @@ friends:
 
 #是否开启“关于我”。
 #不开启——
-aboutme: false
+#aboutme: false
 #开启——
-#aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+aboutme: PHP开发工程师，专注web开发
