@@ -1,7 +1,7 @@
 ---
 title: Medium 是如何加载图片的？
 date: 2016-03-03 12:21:12
-tags: [medium, 图片]
+tags: [medium]
 ---
 
 实现的过程大致如下：

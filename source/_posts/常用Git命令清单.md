@@ -17,7 +17,7 @@ tags: git
 > * Repository：仓库区（或本地仓库）
 > * Remote：远程仓库
 
-## 一、新建代码库
+### 一、新建代码库
 
 ```bash
 
@@ -32,7 +32,7 @@ $ git clone [url]
 
 ```
 
-## 二、配置
+### 二、配置
 
 Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
 
@@ -50,7 +50,7 @@ $ git config [--global] user.email "[email address]"
 
 ```
 
-## 三、增加/删除文件
+### 三、增加/删除文件
 
 ```bash
 
@@ -74,7 +74,7 @@ $ git mv [file-original] [file-renamed]
 
 ```
 
-## 四、代码提交
+### 四、代码提交
 
 ```bash
 
@@ -99,7 +99,7 @@ $ git commit --amend [file1] [file2] ...
 
 ```
 
-## 五、分支
+### 五、分支
 
 ```bash
 
@@ -145,7 +145,7 @@ $ git branch -dr [remote/branch]
 
 ```
 
-## 六、标签
+### 六、标签
 
 ```bash
 
@@ -178,7 +178,7 @@ $ git checkout -b [branch] [tag]
 
 ```
 
-## 七、查看信息
+### 七、查看信息
 
 ```bash
 
@@ -233,7 +233,7 @@ $ git reflog
 
 ```
 
-## 八、远程同步
+### 八、远程同步
 
 ```bash
 
@@ -263,7 +263,7 @@ $ git push [remote] --all
 
 ```
 
-## 九、撤销
+### 九、撤销
 
 ```bash
 
@@ -297,7 +297,7 @@ $ git revert [commit]
 
 ```
 
-十、其他
+### 十、其他
 
 ```bash
 
