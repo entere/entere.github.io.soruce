@@ -1,5 +1,5 @@
 ---
-title: git小知识：clone项目到一个非空目录
+title: 【git小知识】clone项目到一个非空目录
 date: 2016-03-31 22:35:33
 tags: git
 ---
@@ -12,7 +12,7 @@ fatal: destination path '.' already exists and is not an empty directory.
 
 > * 进入非空目录，假设是 /v5_uc
 
-> * git clone -b bate1 --no-checkout http://gitlab.blogcore.cn/v5/v5_uc.git tmp
+> * git clone -b bate1 --no-checkout git@gitlab.xxxxx.com:v5/v5_uc.git tmp
 
 > * mv tmp/.git .   #将 tmp 目录下的 .git 目录移到当前目录
 
