@@ -5,7 +5,7 @@ tags: git
 ---
 
 ### 1.概述
-如果我们往一个非空的目录下 clone git 项目，就会提示错误信息：
+如果我们往一个非空的目录下 `clone git` 项目，就会提示错误信息：
 fatal: destination path '.' already exists and is not an empty directory.
 
 ### 2.解决
