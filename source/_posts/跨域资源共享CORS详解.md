@@ -8,7 +8,7 @@ tags: [javascript,cors]
 
 CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource sharing）。
 它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-
+<!-- more --> 
 
 本文详细介绍CORS的内部机制。
 

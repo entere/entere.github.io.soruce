@@ -12,6 +12,8 @@ tags: [jQuery, Ajax]
 
 事情起因是这样的，因为页面上有多个相似的异步请求动作，本着提高代码可重用性的原则，我封装了一个名为getData的函数，它接收不同参数，只负责获取数据，然后把数据return。基本的逻辑剥离出来是这样的：
 
+<!-- more --> 
+
 ```javascript
 
 function getData1(){
