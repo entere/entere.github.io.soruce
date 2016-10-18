@@ -7,6 +7,8 @@ tags: [WebRTC, 视频直播]
 
 > WebRTC（http://webrtc.org/） 是 google主推的一个项目，旨在使得浏览器能为实时通信（RTC）提供简单的JavaScript接口。有了它，直接通过浏览器的 Web 页面就可以实现音视频聊天功能，无需任何插件。
 
+<!-- more --> 
+
 # WebRTC交互过程
 
 要用WebRTC建立一个p2p通道需要经历二个步骤：
@@ -63,9 +65,9 @@ var pc = new RTCPeerConnection(iceServerConfig);
 
 代码已上传到github 
 
-点我查获取源码
+[点我查获取源码](https://github.com/entere/dortc)
 
-点我查看Demo
+[点我查看Demo](http://219.238.250.38:3000/)
 
 
 
