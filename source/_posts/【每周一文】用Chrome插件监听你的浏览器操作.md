@@ -1,12 +1,12 @@
 ---
-title: 用Chrome插件监听你的浏览器操作
-date: 2017-03-15 08:57:52
+title: 【每周一文】用Chrome插件监听你的浏览器操作
+date: 2017-03-15 21:57:52
 tags: [插件,chrome]
 ---
 
 
 
-＃写在前面
+# 写在前面
 
 前几天接到武阳电话，这丫给我打电话，一定没有好事。果然……
 
@@ -27,7 +27,7 @@ tags: [插件,chrome]
 <!-- more --> 
 
 # 最终效果
-拿到上网记录输出日志，如下图
+通过 `chrome` 扩展拿到上网记录输出日志，如下图
 
 ![上网记录](/images/20170315_git_3.png "上网记录")
 
@@ -59,9 +59,9 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 
 ```
 
-＃遇到的问题
+# 遇到的问题
 
-在使用chrome.tabs.onUpdated.addListener拦截url时，遇到了onUpdate事件多次运行的问题，debug了一下，发现在tab更新url的时候，会有下面的四种情况
+在使用 `chrome.tabs.onUpdated.addListener` 拦截 `url` 时，遇到了 `onUpdate`事件多次运行的问题，`debug` 了一下，发现在`tab`更新`url`的时候，会有下面的四种情况
 
 ```json
 //第一种 访问url，触发事件，loading
@@ -160,9 +160,9 @@ tab = {
 
 ```
 
-＃总结
+# 总结
 
-总结以上四种情况：在tab更新url时
+总结以上四种情况：在`tab`更新`url`时
 
 1、访问url，触发事件，loading
 2、访问title，触发事件，loading
@@ -186,10 +186,12 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo,tab) {
 
 ```
 
-＃后记
+# 后记
 
 代码写完，妹子顺利安装后，武阳不但乖乖还钱了，还发了我很多红包。一向嚣张的武阳变乖了吗？不是，因为我掌握着妹子的上网记录～，心情好时我会把记录推给武阳，心情不好时，有红包心情就好喽。
 
+
+以上内容，纯属虚构。如需代码，请联系 entere#126.com 
 
 
 

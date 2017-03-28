@@ -1,6 +1,6 @@
 ---
 title: 'Android方法总数超过64K时,dex分割'
-date: 2016-10-25 21:54:47
+date: 2015-10-25 21:54:47
 tags: [Android]
 ---
 
