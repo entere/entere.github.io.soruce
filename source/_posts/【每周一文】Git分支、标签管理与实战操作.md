@@ -24,11 +24,12 @@ tags: git
 
 > 「领导，客户想看一下 bot 项目 v2.0版的代码，你那保存有吗？」，虽然是凌晨，小汪两眼依然炯炯有神。也许是第一次负责一个完整的产品开发，让小汪感觉很兴奋。
 
-> 「好的，我给你下载一份，还好版本更新我打有 Tag 」。
+> 「好的，我给你下载一份，Git 打有 Tag 」。
 
-> 「Git 真是个神器」小袁带着对 Git 的崇拜，回到工位继续 Coding。
+> 「Git 真是个神器」小汪带着对 Git 的崇拜，回到工位继续 推演流程。
 
 # 如何使用
+
 
 **分支**
 
@@ -95,17 +96,18 @@ $ git push origin --tags
 # 删除本地Tag
 $ git tag -d v1.0.1
 
-
-# 删除远程Tag
+# 删除远程 Tag
 $ git push origin :refs/tags/v1.0.1
 
-# 后期加注标签
-$ git tag -a v1.0.1 9fceb02d0ae598e95dc970b74767f19372d61af8
+# 为已经提交的代码打上 Tag
+$ git log --pretty=oneline # 先查看有那些提交
+$ git tag -a v1.0.1 f5c7fdc
+$ git  push origin v1.0.1 # 把tag推送到远程
 
 # 切换到标签
 $ git checkout v1.0.1
 
-# 获取指定tag 的代码，并在此基础上编辑：先 git clone 整个仓库，然后 git checkout tag_name 就可以取得 tag 对应的代码了。但是这时候 git 可能会提示你当前处于一个“detached HEAD" 状态，因为 tag 相当于是一个快照，是不能更改它的代码的，如果要在 tag 代码的基础上做修改，你需要一个分支：
+# 获取指定tag 的代码，并在此基础上编辑：先 git clone 整个仓库，然后 git checkout tag_name 就可以取得 tag 对应的代码了。但是这时候 git 可能会提示你当前处于一个“detached HEAD" 状态，因为 tag 相当于是一个快照，是不能更改它的代码的，如果要在 tag 代码的基础上做修改，你需要一个把这个tag拉到一个分支上：
 
 > $ git checkout -b branch_name tag_name
 
