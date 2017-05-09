@@ -1,12 +1,14 @@
 ---
-title: 【每周一文】《大话设计模式》php版：商场促销----策略模式
-date: 2017-04-11 21:36:23
+title: 【每周一文】《大话设计模式》php版：策略模式
+date: 2017-04-16 21:36:23
 tags: [设计模式,策略模式,大话设计模式php]
 ---
 
 # 写在前面
 
 大话设计模式是伍迷写的一本关于设计模式的书，这是我看过的最好的关于设计模式的书，没有之一。书中的示例是基于 C# 语言的。我把代码部分改成了 PHP 版的，以方便 PHP 程序猿查看。以下文字内容来源于《大话设计模式》此书，只不过把代码换成了 PHP 。 [Java 版请看这里](http://blog.csdn.net/monkey_d_meng/article/details/5681174)
+
+<!-- more --> 
 
 **时间：2月27日22点  地点：大鸟房间  人物：小菜、大鸟**
 
@@ -123,14 +125,17 @@ $obj->submit("打8折",2,39);
 大约1个小时后，小菜交出了第三份作业。
 
 代码结构图
+
+![代码结构图](http://hi.csdn.net/attachment/201006/19/0_1276989870q5S1.gif)
  
 ICashSuper.php
 
 ```php
-<?php
-//现金收费接口  
-namespace Entere\Cashier;
 
+<?php
+namespace Entere\Pattern\Strategy;
+
+//现金收钱接口 
 interface ICashSuper {
     /**
      * 计算价钱
@@ -142,16 +147,18 @@ interface ICashSuper {
 
 } 
 ?>
+
 ```
 
 
 CashNormal.php
 
 ```php
-<?php
-namespace Entere\Cashier;
 
-use Entere\Cashier\ICashSuper;
+<?php
+namespace Entere\Pattern\Strategy;
+
+use Entere\Pattern\Strategy\ICashSuper;
 
 // 正常收钱策略  
 class CashNormal implements ICashSuper {
@@ -167,15 +174,16 @@ class CashNormal implements ICashSuper {
 
 }
 ?>
+
 ```
 
 CashRebate.php
 
 ```php
 <?php
-namespace Entere\Cashier;
+namespace Entere\Pattern\Strategy;
 
-use Entere\Cashier\ICashSuper;
+use Entere\Pattern\Strategy\ICashSuper;
 
 // 折扣收取策略  
 class CashRebate implements ICashSuper {
@@ -195,20 +203,19 @@ class CashRebate implements ICashSuper {
 
 }
 ?>
+
 ```
+CashReturn.php
 
 ```php
+
 <?php
+namespace Entere\Pattern\Strategy;
 
-namespace Entere\Cashier;
-
-use Entere\Cashier\ICashSuper;
+use Entere\Pattern\Strategy\ICashSuper;
 // 返利策略  
 class CashReturn implements ICashSuper {
-
-    
     private $_moneyCondition = 0;//返利条件
-
     private $_moneyReturn = 0;//返利钱数
 
     /**
@@ -229,9 +236,7 @@ class CashReturn implements ICashSuper {
      */
     public function acceptCash($money) {
         $result = $money;  
-        
-        if ($money >= $this->_moneyCondition)  
-        {  
+        if ($money >= $this->_moneyCondition)  {  
             $result = $money - intval($money / $this->_moneyCondition) * $this->_moneyReturn;  
         }  
         return $result;  
@@ -245,39 +250,37 @@ class CashReturn implements ICashSuper {
 CashFactory.php
 
 ```php
+
 <?php
 //现金收费工厂类
-namespace Entere\Cashier;
+namespace Entere\Pattern\Strategy;
 
-use Entere\Cashier\CashNormal;
-use Entere\Cashier\CashRebate;
-use Entere\Cashier\CashReturn;
+use Entere\Pattern\Strategy\CashNormal;
+use Entere\Pattern\Strategy\CashRebate;
+use Entere\Pattern\Strategy\CashReturn;
   
 class CashFactory  {  
     public static function createCash($type)  
     {  
         $cs = null;  
-        if ("正常收费" == $type)  
-        {  
+        if ("正常收费" == $type)  {  
             $cs = new CashNormal();  
-        }  
-        else if ("满300返100" == $type)  
-        {  
+        }  else if ("满300返100" == $type)  {  
             $cs = new CashReturn(300, 100);  
-        }  
-        else if ("打8折" == $type)  
-        {  
+        }  else if ("打8折" == $type)  {  
             $cs = new CashRebate(0.8);  
         }  
           
         return $cs;  
     }  
 }
-
 ?>
+
 ```
+Client.php
 
 ```php
+
 <?php  
 //客户端代码  
 class Client  
@@ -289,8 +292,7 @@ class Client
         $this->consume("正常收费", 1, 1000);  
         $this->consume("满300返100", 1, 1000);  
         $this->consume("打8折", 1, 1000);  
-  
-        System.out.println("总计:" + total);  
+        printf("总计：%s", $total);  
     }  
   
     public function consume($type, $num, $price)  
@@ -303,6 +305,7 @@ class Client
     }  
 } 
 ?>
+
 ```
 
 “搞定，这次无论你要怎么改，我都可以简单处理完成。”小菜自信满满地说。
@@ -329,7 +332,10 @@ class Client
 
 策略模式（Strategy）结构图
 
+![策略模式（Strategy）结构图](http://hi.csdn.net/attachment/201006/19/0_12769899720BOF.gif)
+
 ```php
+
 <?php
 //Strategy类，定义所有支持的算法的公共接口  
 interface Strategy  
@@ -390,7 +396,9 @@ class Main
     }  
 } 
 ?>
-``` 
+
+```
+
 # 2.5 策略模式实现
 
 小菜：“我明白了，我昨天写的 CashSuper 就是抽象策略，而正常收费 CashNormal、打折收费 CashRebate 和返利收费 CashReturn 就是三个具体策略，也就是策略模式中说的具体算法，对吧？”
@@ -402,6 +410,8 @@ class Main
 商场收银系统v1.2
 
 代码结构图
+
+![代码结构图](http://hi.csdn.net/attachment/201006/19/0_1276990048DO8H.gif)
 
 ```php
 
@@ -479,7 +489,11 @@ class Client
 ```php
 
 <?php
-//改造后的CashContext  
+namespace Entere\Pattern\Strategy;
+
+use Entere\Pattern\Strategy\CashNormal;
+use Entere\Pattern\Strategy\CashRebate;
+use Entere\Pattern\Strategy\CashReturn;
 
 //工厂与策略结合
 class CashContext {
@@ -551,8 +565,9 @@ class CashContext {
     }   
 
 
-} 
+}
 ?>
+
 ```
 
 ```php
@@ -644,7 +659,7 @@ $totalPrices = $cashContext->acceptCash($num * $price);
 ?>
 ``` 
 
- “你的意思是，简单工厂模式我需要让客户端认识两个类，CashSuper 和 CashFactory，而策略模式与简单工厂模式结合的用法，客户端就只需要认识一个类 CashContext。耦合度更加降低。”
+“你的意思是，简单工厂模式我需要让客户端认识两个类，CashSuper 和 CashFactory，而策略模式与简单工厂模式结合的用法，客户端就只需要认识一个类 CashContext。耦合度更加降低。”
 
 “说的木有错，我们在客户端实例化的是 CashContext 的对象，调用的是 CashContext 的方法，这使得具体的收费算法彻底地与客户端分离。连算法的父类 CashSuper 都不让客户端认识了。相当于创建了一个句柄类。”
 
@@ -687,3 +702,7 @@ $totalPrices = $cashContext->acceptCash($num * $price);
 “反射真的有这么神奇？”小菜疑惑地望向了远方。
 
 （注：在抽象工厂模式章节有对反射的讲解）
+
+# 源码
+
+[本文源码请点此查看](https://github.com/entere/pattern)
