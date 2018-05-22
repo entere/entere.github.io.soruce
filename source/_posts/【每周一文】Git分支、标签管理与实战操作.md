@@ -137,7 +137,22 @@ $ git merge --no-ff develop
 比如你在开发过程中突然要改线上 Bug 这时可能要临时建一分支，这样的分支使用完以后，应该马上删除，确保代码库的的常用分支始终只有 master 和 develop。
 
 
+# 实用技巧
 
+1、git pull如何强制覆盖本地文件呢：
+下面是正确的方法：
+
+```
+$ git fetch --all
+# 然后，你有两个选择：
+$ git reset --hard origin/master
+# 或者如果你在其他分支上：
+$ git reset --hard origin/<branch_name>
+```
+
+说明：
+git fetch从远程下载最新的，而不尝试合并或rebase任何东西。
+然后git reset将主分支重置为您刚刚获取的内容。 --hard选项更改工作树中的所有文件以匹配origin/master中的文件
 
 
 
