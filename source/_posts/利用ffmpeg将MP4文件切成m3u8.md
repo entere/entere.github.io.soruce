@@ -1,6 +1,6 @@
 ---
 title: 利用ffmpeg将MP4文件切成m3u8
-date: 2016-09-20 22:00:21
+date: 2015-09-20 22:00:21
 tags: [ffmpeg, m3u8]
 ---
 

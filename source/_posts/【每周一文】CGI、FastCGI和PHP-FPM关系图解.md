@@ -1,6 +1,6 @@
 ---
 title: 【每周一文】CGI、FastCGI和PHP-FPM关系图解
-date: 2017-08-05 21:20:13
+date: 2016-08-05 21:20:13
 tags: [php, CGI]
 ---
 

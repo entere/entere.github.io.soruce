@@ -1,6 +1,6 @@
 ---
 title: 跨域资源共享CORS详解
-date: 2016-04-26 23:38:59
+date: 2015-04-26 23:38:59
 tags: [javascript,cors]
 ---
 

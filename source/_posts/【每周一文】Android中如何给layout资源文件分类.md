@@ -1,6 +1,6 @@
 ---
 title: 【每周一文】Android中如何给layout资源文件分类
-date: 2017-06-25 22:27:39
+date: 2016-06-25 22:27:39
 tags: [Android, 资源文件]
 ---
 

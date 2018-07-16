@@ -1,6 +1,6 @@
 ---
 title: 【每周一文】RecyclerVeiw Item OnClick事件处理方式
-date: 2017-07-31 22:18:31
+date: 2016-07-31 22:18:31
 tags: [Android, RecyclerView]
 ---
 

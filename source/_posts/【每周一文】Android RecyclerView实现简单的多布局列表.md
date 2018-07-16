@@ -1,6 +1,6 @@
 ---
 title: 【每周一文】Android RecyclerView实现简单的多布局列表
-date: 2017-07-12 21:30:42
+date: 2016-07-12 21:30:42
 tags: [Android, RecyclerView]
 ---
 

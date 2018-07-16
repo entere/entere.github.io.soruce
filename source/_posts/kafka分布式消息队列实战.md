@@ -1,6 +1,6 @@
 ---
 title: kafka分布式消息队列实战
-date: 2016-08-15 15:47:14
+date: 2015-08-15 15:47:14
 tags: [kafka,队列,laravel]
 ---
 

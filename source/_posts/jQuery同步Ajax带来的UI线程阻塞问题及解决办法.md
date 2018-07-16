@@ -1,6 +1,6 @@
 ---
 title: jQuery同步Ajax带来的UI线程阻塞问题及解决办法
-date: 2016-04-06 16:33:46
+date: 2015-04-06 16:33:46
 tags: [jQuery, Ajax]
 ---
 

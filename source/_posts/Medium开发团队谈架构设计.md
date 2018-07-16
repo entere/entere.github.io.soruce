@@ -1,6 +1,6 @@
 ---
 title: Medium开发团队谈架构设计
-date: 2016-03-06 22:12:03
+date: 2015-03-06 22:12:03
 tags: [架构, medium]
 ---
 [转载自infoQ](http://www.infoq.com/cn)
