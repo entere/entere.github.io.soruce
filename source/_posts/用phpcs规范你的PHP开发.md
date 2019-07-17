@@ -13,6 +13,9 @@ composer global require phpmd/phpmd
 composer global require friendsofphp/php-cs-fixer
 
 ```
+
+<!-- more -->
+
 安装好后会在 ~/.composer/vendor/bin 下看到
 
 ```
